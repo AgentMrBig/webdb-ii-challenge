@@ -24,8 +24,10 @@ router.get('/:id', async (req, res) => {
 });
 
 router.post('/', async (req, res) => {
+    const carsData = req.body;
+    console.log(req.body);
     try {
-        const carsData = req.body;
+
         const [id] = await db('cars').insert(carsData);
         const newCarEntry = await db('cars').where({ id });
 

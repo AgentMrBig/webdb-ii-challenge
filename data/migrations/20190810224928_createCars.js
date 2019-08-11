@@ -5,7 +5,7 @@ exports.up = function (knex, promise) {
         table.string('vin').notNullable();
         table.string('make').notNullable();
         table.string('model').notNullable();
-        table.integer('milage').notNullable();
+        table.integer('mileage').notNullable();
         table.string('titleStatus');
         table.string('transmission');
         // table.timestamp('createdAt').defaultTo(knex.fn.now());
